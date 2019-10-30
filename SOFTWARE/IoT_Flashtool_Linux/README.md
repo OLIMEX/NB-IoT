@@ -17,9 +17,11 @@ How to use it:
 2. Flash firmware:
 
 	#Upload Bootloader:
+	
 	python ./MT2625.py <serial_port> 0x08002000 <bootloader.bin>
 	
 	#Upload Firmware:
+	
 	python ./MT2625.py <serial_port> 0x08012000 <firmware.bin>
 	
 3. Upload application:
