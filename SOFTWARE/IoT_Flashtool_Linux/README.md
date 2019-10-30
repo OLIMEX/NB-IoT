@@ -8,14 +8,17 @@ Requirements:
 How to use it:
 
 1. Backup NVDM:
+
 	#This will create <imei>.dat file. 
 
 	python ./MT2625.py <serial_port> --backup.
 
 
 2. Flash firmware:
+
 	#Upload Bootloader:
 	python ./MT2625.py <serial_port> 0x08002000 <bootloader.bin>
+	
 	#Upload Firmware:
 	python ./MT2625.py <serial_port> 0x08012000 <firmware.bin>
 	
@@ -33,7 +36,7 @@ How to use it:
 
 6. Simultaneously Backup + one of the options above:
 
-	python ./MT2625.py <serial_port> <address> <file> --backup
+	python ./MT2625.py <serial_port> <address> <file> \--backup
 
        	i.e: Backup + upload:
 
