@@ -36,7 +36,7 @@ How to use it:
 
 6. Simultaneously Backup + one of the options above:
 
-	python ./MT2625.py <serial_port> <address> <file> \--backup
+	python ./MT2625.py \<serial_port\> \<address\> \<file\> --backup
 
        	i.e: Backup + upload:
 
