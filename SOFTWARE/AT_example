@@ -17,13 +17,15 @@ AT+CPIN? - checks if the SIM card requires pin code
 AT+CFUN=1 - enables full functionality
 AT+CEREG=5 - network registration status
 
-The settings below depend on your network operator. 
+The settings below depend on your network operator. These commands
+are required only during the initial setting.
+
 Ask the cell operator for the settings:
 
-AT+QBAND=1,3 - select network band - can be different for your network
-AT+QCGDEFCONT="IP","iot.test" - depends on your network
+AT+QBAND=1,3 - select network band - try 0 if in doubt
+AT+QCGDEFCONT="IP","iot.test" - AP name; different for each network
 AT+CEDRXS=0,5 - depends on your network
-AT+QRST=1 - resets the module so that the new settings can get loaded.
+AT+QRST=1 - resets the module so that the new settings can get applied.
 
 Notice that the first time when you connect to the network it might take 
 significant amount of time (sometimes up to 10 minutes). This depends 
