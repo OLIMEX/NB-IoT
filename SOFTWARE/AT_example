@@ -1,0 +1,37 @@
+First notice that the cell network should support narrowband IoT, 
+not all networks support NB IoT. The SIM card should be NB IoT enabled, 
+again regular SIM cards would not work. Consult with your cell network 
+provider if they have NB IoT support and if you can get NB IoT enabled 
+SIM card (if you haven't already).
+
+Once you are in the proper network with the proper SIM card placed it 
+in the module - connect the USB cable to the board. At this point you 
+need to turn on the board by pressing and holding down the two buttons 
+(the board has two buttons - one is PWR_KEY1 for power on, 
+the other RST_KEY1 for reset). Open the serial terminal. In order to 
+connect to the network you would need to enter a set of commands. 
+The set of commands we use here during testing is exactly this:
+
+AT - baudrate sync between the board an the terminal
+AT+CPIN? - checks if the SIM card requires pin code
+AT+CFUN=1 - enables full functionality
+AT+CEREG=5 - network registration status
+
+The settings below depend on your network operator. 
+Ask the cell operator for the settings:
+
+AT+QBAND=1,3 - select network band - can be different for your network
+AT+QCGDEFCONT="IP","iot.test" - depends on your network
+AT+CEDRXS=0,5 - depends on your network
+AT+QRST=1 - resets the module so that the new settings can get loaded.
+
+Notice that the first time when you connect to the network it might take 
+significant amount of time (sometimes up to 10 minutes). This depends 
+on the signal strength. Subsequent connections should be much faster, 
+almost instant.
+
+You should check the AT commands manual for more info about each command.
+
+The board has two LEDs - one is related to the battery charger circuit 
+(if you have Li-Po battery attached). It is named CHRG1. The other one 
+is for the cell network status, it is called LED_Netlight1.
