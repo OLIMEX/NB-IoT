@@ -2,7 +2,7 @@ This is AT restore firmware procedure for Olimex NB-IoT-Devkit
 
 It should be used if you overwrote the AT command firmware. It is made for Linux.
 
-#####################################################################################################
+####################################################
 Preparation:
 
 Download all files from the folder where this README is located. 
@@ -22,7 +22,7 @@ https://github.com/OLIMEX/ch340-dkms
 
 If you update the kernel of your Linux installation, you might need to run the installation again!
 
-#####################################################################################################
+####################################################
 
 Once the driver is successfully installed:
 
@@ -38,4 +38,4 @@ where SN and IMEI are written on the top of Qeuctel BC66 IC.
 Notice that the repair script uses auto-detect, so make sure you have only one peripheral using
 CH340 convertor for the USB connection.
 
-#######################################################################################################
+####################################################
