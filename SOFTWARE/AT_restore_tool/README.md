@@ -13,7 +13,7 @@ In order to install a patched CH340 driver, please run "install_ch340.sh" file:
 1. Open terminal in the directory containing "install_ch340.sh".
 2. Execute the following line:
 
-./install_ch340.sh
+  ./install_ch340.sh
 
 The reason is that this script allows CH340T to operate at higher baudrate and enables auto-reset 
 function, which is not supported with the official ch340 drivers for Linux.
