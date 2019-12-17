@@ -33,7 +33,7 @@ Once the driver is successfully installed:
 
 where SN and IMEI numbers are written on the top of Quectel BC66 chip. 
 
-Notice that the repair script uses auto-detect, so make sure you have only one peripheral using
-CH340 convertor for the USB connection.
+Notice that the repair script has auto-detect, so make sure you have only one peripheral using
+CH340 connected to the computer.
 
 ####################################################
