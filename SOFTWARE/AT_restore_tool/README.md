@@ -11,9 +11,7 @@ Download all files from the folder where this README is located.
 In order to install a patched CH340 driver, please run "install_ch340.sh" file:
 
 1. Open terminal in the directory containing "install_ch340.sh".
-2. Execute the following line:
-
-  ./install_ch340.sh
+2. Execute the following: ./install_ch340.sh
 
 The reason is that this script allows CH340T to operate at higher baudrate and enables auto-reset 
 function, which is not supported with the official ch340 drivers for Linux.
@@ -31,10 +29,9 @@ Once the driver is successfully installed:
 
 2. Open new terminal in the current directory
 
-3. Enter down:
- ./REPAIR.SH <SN> <IMEI>
+3. Enter down: ./REPAIR.SH <SN> <IMEI>
 
-where SN and IMEI are written on the top of Qeuctel BC66 IC. 
+where SN and IMEI numbers are written on the top of Quectel BC66 chip. 
 
 Notice that the repair script uses auto-detect, so make sure you have only one peripheral using
 CH340 convertor for the USB connection.
