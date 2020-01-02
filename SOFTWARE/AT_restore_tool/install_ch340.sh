@@ -16,6 +16,32 @@
 #You should have received a copy of the GNU General Public License
 #along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+REQUIRED_PACKAGES=(git dkms python python-minimal python-serial)
+INSTALL_LIST=()
+for package in ${REQUIRED_PACKAGES[@]}; do
+    dpkg -l | grep -w $package > /dev/null 2>&1 || \
+    INSTALL_LIST+=($package)
+done
+
+if [[ ! -z $INSTALL_LIST ]];
+	then
+		echo "=============== Installing ================="
+		echo ""
+		sudo apt-get update > /dev/null 2>&1
+		
+		for package in ${INSTALL_LIST[@]}; do
+			echo "This script needs to install $package package in order to start successfully"
+			echo "Do you want to install $package (Y/N) ?"
+			read -n 1 -s key
+			[[ $key != 'y' ]] && [[ $key != 'Y' ]] && continue
+			echo -n "Installing $package.................."
+			sudo apt-get install -y $package > /dev/null 2>&1 && \
+			echo -e "$GREEN[DONE]$RESET" || echo -e "$RED[FAILED]$RESET" && echo "Failed to install $package" >> ./Installation.LOG
+		done
+
+fi
+
+
 function install_ch340()
 {
 	# Install ch340-dkms
