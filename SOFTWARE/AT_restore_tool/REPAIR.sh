@@ -55,9 +55,9 @@ CYAN="\033[36m"
 BOLD="\033[1m"
 RESET="\033[0m"
 
-DONE="$GREEN[ DONE ]$RESET"
-FAILED="$RED[ FAILED ]$RESET"
-SKIP="$CYAN[ SKIPPED ] $RESET"
+DONE=$GREEN"[ DONE ]"$RESET
+FAILED=$RED"[ FAILED ]"$RESET
+SKIP=$CYAN"[ SKIPPED ]"$RESET
 
 FLASHTOOL_DIR="./IoT_Flashtool_Linux"
 FLASHTOOL="python $FLASHTOOL_DIR/MT2625.py"
@@ -69,10 +69,6 @@ function bold()
 	echo -ne "$BOLD$1$RESET"
 }
 
-function printline()
-{
-	echo -e $1
-}
 
 function find_ch340()
 {
@@ -100,10 +96,11 @@ function erase_app()
 	do
 		echo -n "Removing app......................."
 		read -n 1 -t 3 -s && echo -e $SKIP && break
-		$FLASHTOOL $PORT 0x08292000 $FLASHTOOL_DIR/eraseapp.bin > ./ERASE.log 2>&1 && printline "$DONE" && break
-		printline ""$FAILED""
-		echo ""
+		$FLASHTOOL $PORT 0x08292000 $FLASHTOOL_DIR/eraseapp.bin > ./ERASE.log 2>&1 && echo -e $DONE && break
+		echo -e $FAILED
 		echo "$(bold ENTER) - retry $(bold ESC) - cancel"
+		read -n 1 -s key && [[ $key == $'\e' ]] && exit 1
+		echo ""
 	done
 
 }
@@ -117,10 +114,11 @@ function restore_nvdm()
 		
 		echo -n "Restoring nvdm....................."
 		read -n 1 -t 3 -s && echo -e $SKIP && break
-		$FLASHTOOL $PORT 0x083A5000 $FLASHTOOL_DIR/restore.bin > ./RESTORE.log 2>&1 && printline "$DONE" && break
-		printline ""$FAILED""
-		echo ""
+		$FLASHTOOL $PORT 0x083A5000 $FLASHTOOL_DIR/restore.bin > ./RESTORE.log 2>&1 && echo -e $DONE && break
+		echo -e $FAILED
 		echo "$(bold ENTER) - retry $(bold ESC) - cancel"
+		read -n 1 -s key && [[ $key == $'\e' ]] && exit 1
+		echo ""
 	done
 }
 
@@ -135,20 +133,20 @@ function change_imei()
 
 if [[ $1 != *"MPA"* || $(expr length $1) != 15 ]];
 	then
-		printline "$RED Wrong SN number$RESET "
+		echo -e "$RED Wrong SN number$RESET "
 		exit 1
 fi
 
 if [[ $(expr length $2) != 15 ]];
 	then
-		printline "$RED Wrong IMEI number $RESET"
+		echo -e "$RED Wrong IMEI number $RESET"
 		exit 1
 fi
 
 SN=$1
 IMEI=$2
 
-printline "$CYAN====================== BEGIN REPAIRING =====================$RESET"
+echo -e "$CYAN====================== BEGIN REPAIRING =====================$RESET"
 
 erase_app
 restore_nvdm
