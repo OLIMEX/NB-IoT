@@ -29,7 +29,7 @@ Once the driver is successfully installed:
 
 2. Open new terminal in the current directory
 
-3. Enter down: ./REPAIR.SH <SN> <IMEI>
+3. Enter down: ./REPAIR.SH SN IMEI
 
 where SN and IMEI numbers are written on the top of Quectel BC66 chip. 
 
