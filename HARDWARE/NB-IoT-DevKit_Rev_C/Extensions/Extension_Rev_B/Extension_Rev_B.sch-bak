@@ -1,0 +1,302 @@
+EESchema Schematic File Version 5
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+Comment5 ""
+Comment6 ""
+Comment7 ""
+Comment8 ""
+Comment9 ""
+$EndDescr
+$Comp
+L OLIMEX_Connectors:CON10 EXT2
+U 1 1 5D9C4405
+P 3550 1900
+F 0 "EXT2" H 3500 2450 60  0000 C CNN
+F 1 "PN1x10" H 3550 1300 60  0000 C CNN
+F 2 "" H 3475 2250 60  0000 C CNN
+F 3 "" H 3475 2250 60  0000 C CNN
+	1    3550 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L OLIMEX_Connectors:CON10 EXT1
+U 1 1 5D9C6D57
+P 2750 1900
+F 0 "EXT1" H 2750 2450 60  0000 R CNN
+F 1 "PN1x10" H 2800 1300 60  0000 R CNN
+F 2 "" H 2675 2250 60  0000 C CNN
+F 3 "" H 2675 2250 60  0000 C CNN
+	1    2750 1900
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 2650 1500
+NoConn ~ 2650 1600
+NoConn ~ 2650 1700
+Wire Wire Line
+	2250 2000 2650 2000
+Text GLabel 2250 2000 0    50   Input ~ 0
+TxD-DBG
+Wire Wire Line
+	2250 1900 2650 1900
+Text GLabel 2250 1900 0    50   Input ~ 0
+RxD-DBG
+NoConn ~ 2650 2100
+NoConn ~ 2650 2200
+NoConn ~ 2650 2300
+NoConn ~ 2650 2400
+Text GLabel 3950 1500 2    50   Input ~ 0
+GPIO1
+Text GLabel 3950 1600 2    50   Input ~ 0
+GPIO2
+Text GLabel 3950 1700 2    50   Input ~ 0
+GPIO3
+Text GLabel 3950 1800 2    50   Input ~ 0
+GPIO4
+Text GLabel 3950 1900 2    50   Input ~ 0
+GPIO5
+Text GLabel 3950 2000 2    50   Input ~ 0
+Netlight
+Text GLabel 3950 2100 2    50   Input ~ 0
+RTS_AUX
+Text GLabel 3950 2200 2    50   Input ~ 0
+CTS_AUX
+Text GLabel 3950 2300 2    50   Input ~ 0
+TxD_AUX
+Text GLabel 3950 2400 2    50   Input ~ 0
+RxD_AUX
+Wire Wire Line
+	3650 1500 3950 1500
+Wire Wire Line
+	3650 1600 3950 1600
+Wire Wire Line
+	3650 1700 3950 1700
+Wire Wire Line
+	3650 1800 3950 1800
+Wire Wire Line
+	3650 1900 3950 1900
+Wire Wire Line
+	3650 2000 3950 2000
+Wire Wire Line
+	3650 2100 3950 2100
+Wire Wire Line
+	3650 2200 3950 2200
+Wire Wire Line
+	3650 2300 3950 2300
+Wire Wire Line
+	3950 2400 3650 2400
+Wire Wire Line
+	2300 1800 2650 1800
+$Comp
+L OLIMEX_Power:GND #PWR?
+U 1 1 5D9F46D2
+P 2300 1800
+F 0 "#PWR?" H 2300 1550 50  0001 C CNN
+F 1 "GND" V 2200 1800 50  0000 R CNN
+F 2 "" H 2300 1800 60  0000 C CNN
+F 3 "" H 2300 1800 60  0000 C CNN
+	1    2300 1800
+	0    1    1    0   
+$EndComp
+$Comp
+L OLIMEX_Connectors:CON3 EXT4
+U 1 1 5DA64827
+P 2750 3100
+F 0 "EXT4" H 2750 3350 60  0000 R CNN
+F 1 "PN1x3" H 2750 2900 60  0000 R CNN
+F 2 "" H 2675 3150 60  0000 C CNN
+F 3 "" H 2675 3150 60  0000 C CNN
+	1    2750 3100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L OLIMEX_Connectors:CON6 EXT5
+U 1 1 5DA73F88
+P 3550 3200
+F 0 "EXT5" H 3500 3550 60  0000 C CNN
+F 1 "PN1x6" H 3550 2800 60  0000 C CNN
+F 2 "" H 3475 3350 60  0000 C CNN
+F 3 "" H 3475 3350 60  0000 C CNN
+	1    3550 3200
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2650 3000
+NoConn ~ 2650 3100
+NoConn ~ 2650 3200
+Text GLabel 3950 3000 2    50   Input ~ 0
+I2C0_SCL(RI)
+Text GLabel 3950 3100 2    50   Input ~ 0
+I2C0_SDA(DCD)
+Text GLabel 3950 3200 2    50   Input ~ 0
+SPI-MISO
+Text GLabel 3950 3300 2    50   Input ~ 0
+SPI-MOSI
+Text GLabel 3950 3400 2    50   Input ~ 0
+SPI-SCLK
+Text GLabel 3950 3500 2    50   Input ~ 0
+SPI-CS
+Wire Wire Line
+	3650 3000 3950 3000
+Wire Wire Line
+	3650 3100 3950 3100
+Wire Wire Line
+	3650 3200 3950 3200
+Wire Wire Line
+	3650 3300 3950 3300
+Wire Wire Line
+	3650 3400 3950 3400
+Wire Wire Line
+	3650 3500 3950 3500
+Text Notes 3650 1150 2    79   ~ 0
+NB-IoT-Devkit\nextension  
+Wire Notes Line
+	1600 800  4850 800 
+Wire Notes Line
+	4850 800  4850 3750
+Wire Notes Line
+	4850 3750 1600 3750
+Wire Notes Line
+	1600 3750 1600 800 
+Text Notes 8187 1109 2    50   ~ 0
+OLIMEXINO-328\nHEADERS   
+$Comp
+L OLIMEX_Connectors:CON8 CON1
+U 1 1 5DAD0BB4
+P 9000 2775
+F 0 "CON1" H 8736 2635 60  0000 R CNN
+F 1 "D0-D7" H 8780 2834 60  0000 R CNN
+F 2 "" H 8925 3025 60  0000 C CNN
+F 3 "" H 8925 3025 60  0000 C CNN
+	1    9000 2775
+	1    0    0    1   
+$EndComp
+$Comp
+L OLIMEX_Connectors:CON6 CON3
+U 1 1 5DAD9DCE
+P 7075 2750
+F 0 "CON3" H 6625 2900 60  0000 C CNN
+F 1 "A0-A5" H 6625 2700 60  0000 C CNN
+F 2 "" H 7000 2900 60  0000 C CNN
+F 3 "" H 7000 2900 60  0000 C CNN
+	1    7075 2750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L OLIMEX_Connectors:CON7 CON2
+U 1 1 5DAD703B
+P 9000 1650
+F 0 "CON2" H 8550 1800 60  0000 C CNN
+F 1 "D8-D13" H 8500 1650 60  0000 C CNN
+F 2 "" H 8925 1900 60  0000 C CNN
+F 3 "" H 8925 1900 60  0000 C CNN
+	1    9000 1650
+	1    0    0    1   
+$EndComp
+Wire Notes Line
+	5497 812  5497 3735
+Wire Notes Line
+	5497 3735 10438 3735
+Wire Notes Line
+	10438 3735 10438 813 
+Wire Notes Line
+	10438 813  5497 813 
+Text GLabel 9600 2875 2    50   Input ~ 0
+SPI-CS
+Wire Wire Line
+	9100 2875 9600 2875
+NoConn ~ 9100 2975
+NoConn ~ 9100 3075
+Text GLabel 9600 2775 2    50   Input ~ 0
+SPI-SCLK
+Wire Wire Line
+	9600 2775 9100 2775
+Text GLabel 9600 2675 2    50   Input ~ 0
+SPI-MOSI
+Wire Wire Line
+	9600 2675 9100 2675
+Text GLabel 9600 2575 2    50   Input ~ 0
+SPI-MISO
+Wire Wire Line
+	9100 2575 9600 2575
+Text GLabel 9600 2475 2    50   Input ~ 0
+I2C0_SDA(DCD)
+Wire Wire Line
+	9600 2475 9100 2475
+Text GLabel 9600 2375 2    50   Input ~ 0
+I2C0_SCL(RI)
+Wire Wire Line
+	9100 2375 9600 2375
+Text GLabel 9600 1450 2    50   Input ~ 0
+GPIO5
+Text GLabel 9600 1550 2    50   Input ~ 0
+Netlight
+Text GLabel 9600 1650 2    50   Input ~ 0
+RTS_AUX
+Text GLabel 9600 1750 2    50   Input ~ 0
+CTS_AUX
+Text GLabel 9600 1850 2    50   Input ~ 0
+TxD_AUX
+Text GLabel 9600 1950 2    50   Input ~ 0
+RxD_AUX
+Wire Wire Line
+	9600 1950 9100 1950
+Wire Wire Line
+	9100 1850 9600 1850
+Wire Wire Line
+	9100 1750 9600 1750
+Wire Wire Line
+	9100 1650 9600 1650
+Wire Wire Line
+	9100 1550 9600 1550
+Wire Wire Line
+	9100 1450 9600 1450
+$Comp
+L OLIMEX_Power:GND #PWR?
+U 1 1 5DA3DA5D
+P 9525 1275
+F 0 "#PWR?" H 9525 1025 50  0001 C CNN
+F 1 "GND" H 9530 1102 50  0000 C CNN
+F 2 "" H 9525 1275 60  0000 C CNN
+F 3 "" H 9525 1275 60  0000 C CNN
+	1    9525 1275
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9100 1350 9525 1350
+Wire Wire Line
+	9525 1350 9525 1275
+Text GLabel 6725 2650 0    50   Input ~ 0
+GPIO3
+Text GLabel 6725 2850 0    50   Input ~ 0
+GPIO1
+Text GLabel 6725 2750 0    50   Input ~ 0
+GPIO2
+Text GLabel 6725 2550 0    50   Input ~ 0
+GPIO4
+Wire Wire Line
+	6725 2550 6975 2550
+Wire Wire Line
+	6725 2650 6975 2650
+Wire Wire Line
+	6725 2750 6975 2750
+Wire Wire Line
+	6725 2850 6975 2850
+Text GLabel 6725 3050 0    50   Input ~ 0
+TxD-DBG
+Text GLabel 6725 2950 0    50   Input ~ 0
+RxD-DBG
+Wire Wire Line
+	6725 2950 6975 2950
+Wire Wire Line
+	6725 3050 6975 3050
+$EndSCHEMATC

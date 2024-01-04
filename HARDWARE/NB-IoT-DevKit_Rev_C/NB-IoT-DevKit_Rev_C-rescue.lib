@@ -1,0 +1,44 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# PCA9306DCUR(VSSOP-8)-OLIMEX_IC
+#
+DEF PCA9306DCUR(VSSOP-8)-OLIMEX_IC U 0 40 Y Y 1 F N
+F0 "U" 0 250 60 H V C CNN
+F1 "PCA9306DCUR(VSSOP-8)-OLIMEX_IC" 0 -350 50 H V C CNN
+F2 "OLIMEX_IC-FP:VSSOP-8_Pitch-0.50mm_Pad-0.25mm_Dimensions-2.30x2.00x1.00mm" 0 -450 50 H I C CNN
+F3 "" 0 -100 50 H I C CNN
+DRAW
+C 50 -150 10 0 0 0 F
+T 0 -150 145 20 0 0 0 0-5V Italic 1 C C
+T 0 150 145 20 0 0 0 0-5V Italic 1 C C
+T 0 150 180 20 0 0 0 "high-voltage side" Italic 1 C C
+T 0 -150 180 20 0 0 0 "low-voltage side" Italic 1 C C
+T 0 -150 180 20 0 0 0 "low-voltage side" Italic 1 C C
+T 0 0 -100 20 0 0 0 SW Normal 0 C C
+T 0 0 0 20 0 0 0 SW Normal 0 C C
+T 0 0 -280 9 0 0 0 "Vref(1) <= [Vbias(ref)(2) -1.0V] for best results in level shifting applications!!!" Italic 1 C C
+S -25 -75 25 -125 0 0 0 N
+S -25 25 25 -25 0 0 0 N
+S -300 200 300 -300 0 1 0 f
+P 2 0 0 0 -300 -265 300 -265 N
+P 2 0 0 0 -25 -100 -75 -100 N
+P 2 0 0 0 -25 0 -75 0 N
+P 2 0 0 0 0 -175 0 -265 N
+P 2 0 0 0 0 200 0 50 N
+P 2 0 0 0 25 -100 75 -100 N
+P 2 0 0 0 25 0 75 0 N
+P 3 0 0 0 0 -125 0 -150 50 -150 N
+P 6 0 0 0 0 -25 0 -50 50 -50 50 -150 50 -200 150 -200 N
+X GND 1 -400 -200 100 R 50 50 1 1 W
+X VREF1 2 -400 100 100 R 50 50 1 1 W
+X SCL1 3 -400 0 100 R 50 50 1 1 C
+X SDA1 4 -400 -100 100 R 50 50 1 1 C
+X SDA2 5 400 -100 100 L 50 50 1 1 C
+X SCL2 6 400 0 100 L 50 50 1 1 C
+X VREF2 7 400 100 100 L 50 50 1 1 W
+X EN 8 400 -200 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library

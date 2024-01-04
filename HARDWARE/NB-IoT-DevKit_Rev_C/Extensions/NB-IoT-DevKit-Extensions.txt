@@ -1,0 +1,2 @@
+For the NB-IoT-DevKit-Extensions, i.e. schematic, design files and so on, refer to NB-IoT-BC66 for both boards share the same extensions!
+This was initially so! Later on, Kaloyan changed the extensions completely. He should write the connections between BC66 and Olimexino-328!
