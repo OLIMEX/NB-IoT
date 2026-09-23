@@ -1,5 +1,11 @@
 List of changes between hardware revisions for Olimex NB-IoT-DevKit
 
+NB-IoT-DevKit hardware revision D1
+---
+
+1. The BC66 chip changed with BC660K-GL
+
+
 NB-IoT-DevKit hardware revision D
 ---
 
